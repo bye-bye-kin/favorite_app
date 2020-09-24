@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'recipes/index'
+  get 'recipes/show'
+  get 'recipes/new'
+  get 'recipes/edit'
   root to: 'home#top'
   #homeコントローラーのtopアクションが、トップページとして呼び出される。
   devise_for :users
