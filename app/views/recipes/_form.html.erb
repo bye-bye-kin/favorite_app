@@ -1,0 +1,17 @@
+<%# ファイル名に_（アンダーバー）をつけることによって、部分テンプレートと認識される。 %>
+<%= form_for recipe do |f| %>
+        <div class ="form-group">
+          <label>レシピ名</label>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class ="form-group">
+          <label>作り方</label>
+          <%= f.text_area :body, class: 'form-control' %>
+        </div>
+        <div>
+          <%= f.submit class: "btn btn-success" %>
+        </div>
+      <% end %>
+
+<%# recipeという変数はnew.html,erbで定義してある %>
+
