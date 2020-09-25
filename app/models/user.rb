@@ -6,4 +6,6 @@ class User < ApplicationRecord
   
   validates :name, presence: true
   #nameが空の状態でデータベースに保存できないようにする。
+  has_many :recipes, dependent: :destroy
+  #ユーザーが削除された時、持っているレシピも全て削除される。
 end
