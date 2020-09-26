@@ -8,4 +8,6 @@ class User < ApplicationRecord
   #nameが空の状態でデータベースに保存できないようにする。
   has_many :recipes, dependent: :destroy
   #ユーザーが削除された時、持っているレシピも全て削除される。
+  has_many :favorites, dependent: :destroy
+
 end

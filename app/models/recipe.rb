@@ -1,5 +1,7 @@
 class Recipe < ApplicationRecord
   belongs_to :user
+  has_many :favorites, dependent: :destroy
+  #recipeが消された時、いいねも削除される。
 
   with_options presence: true do
     validates :title
