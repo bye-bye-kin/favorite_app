@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resource :user, except: [:new, :create, :destroy]
   #expect...new,create,destroy以外のルーティングを作成するということ。
-  resources :recipes
+  resources :recipes do
+    resource :favorites, only: [:create, :destroy]
+  end
 end
