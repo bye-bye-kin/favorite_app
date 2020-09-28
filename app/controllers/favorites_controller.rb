@@ -5,8 +5,8 @@ class FavoritesController < ApplicationController
 
     redirect_back(fallback_location: root_path)
     #recipe_idと:user_idの組み合わせは一通りしか作られない、としている
-  #投稿詳細画面、投稿一覧画面の２つからいいねができるので、その時いいねしたときの画面に
-  #戻るという記述。
+    #投稿詳細画面、投稿一覧画面の２つからいいねができるので、その時いいねしたときの画面に
+    #戻るという記述。
   end
   
   def destroy
@@ -15,4 +15,5 @@ class FavoritesController < ApplicationController
     @favorite.destroy
     redirect_back(fallback_location: root_path)
     #もし一つ前のページが見つからなかったらroot_pathに移動する
+  end
 end
